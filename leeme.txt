@@ -1,0 +1,5 @@
+-contar palabras X
+-contar caracteres con y sin espacios X
+-palabras repetidas X
+-palabras únicas X
+-cargar archivos y contar lo que haya escrito en él
