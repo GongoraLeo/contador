@@ -26,26 +26,25 @@
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $texto = $_POST['texto'];
         $palabras = str_word_count($texto);
-        echo "<p>El texto es: $texto</p>";
+        echo "<p>El texto introducido es: $texto</p>";
         echo "<p>El texto tiene $palabras palabras.</p>";
         echo "<p>El texto tiene " . strlen($texto) . " caracteres.</p>";
+        
         //caracteres sin espacios
         echo "<p>El texto tiene " . strlen(str_replace(' ', '', $texto)) . " caracteres sin espacios.</p>";
+        
         //número de palabras repetidas debe aparecer un minimo de 2 veces cada palabra en el texto para ser repetida decir el número de veces que se repite cada palabra
 
         $palabras_repetidas = array_diff_assoc(str_word_count($texto, 1), array_unique(str_word_count($texto, 1)));
-        // echo "<p>Las palabras repetidas son: </p>";
-        // foreach ($palabras_repetidas as $palabra) {
-        //     echo "<p>$palabra</p>";
-        // }
-        echo "<p>El texto tiene " . count($palabras_repetidas) . " palabras repetidas.</p>";
 
+        echo "<p>El texto tiene " . count(array_unique($palabras_repetidas)) . " palabras repetidas.</p>";
 
-        //palabras no repetidas
-        // echo "<p>Las palabras no repetidas son: </p>";
-        // foreach (array_diff(str_word_count($texto, 1), $palabras_repetidas) as $palabra) {
-        //     echo "<p>$palabra</p>";
-        // }
+        echo "<p>Las palabras repetidas son: </p>";
+        foreach (array_unique($palabras_repetidas) as $palabra) {
+
+            echo "$palabra (" . substr_count($texto, $palabra) . " veces), ";
+        } 
+
         //número de palabras unicas las palabras unicas son todas las palabras que aparecen al menos una vez
         echo "<p>El texto tiene " . count(array_unique(str_word_count($texto, 1))) . " palabras unicas.</p>";
     }
