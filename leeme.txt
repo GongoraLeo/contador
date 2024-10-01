@@ -2,8 +2,9 @@
 -contar caracteres con y sin espacios X
 -palabras repetidas X
 -palabras únicas X
--cargar archivos y contar lo que haya escrito en él
+-cargar archivos y contar lo que haya escrito en él X
 -introducir, por checkbox o así, la opción de seleccionar que opciones se quieren en el informe
+-modo oscuro
 
 
 -el contador de palabras repetidas da un error, pues cuenta cuando esa palabra aparece formando parte de otra palabra
