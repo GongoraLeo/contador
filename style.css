@@ -1,6 +1,6 @@
 textarea{
     width: 75%;
-    height: 10em;
+    height: 20em;
     margin-bottom: 2%;
     margin-top: 10%;
 }
@@ -15,4 +15,13 @@ h2{
 }
 br{
     margin: 1%;
+}
+.dark{
+    max-width: 42px;
+    float: right;
+    position: fixed;
+    bottom: 2%;
+    right: 2%;
+    margin-right: 3px;
+    cursor: pointer;
 }

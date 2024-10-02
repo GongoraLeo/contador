@@ -16,7 +16,7 @@
 
         </textarea>
         <br>
-        <label for="fichero">Sube tu fichero:</label><input type="file" name="fichero" id="fichero">
+        <label for="fichero">Sube tu fichero: </label><input type="file" name="fichero" id="fichero">
         <br>
         <input type="submit" value="Contar">
         <input type="reset" value="Reset">
@@ -105,7 +105,10 @@
 
 
     ?>
-    <script src="contador.js"></script>
+        <nav><img src="img/modo-claro.png" alt="" class="dark"></nav>
+
+    
+    <script src="dark.js"></script>
 </body>
 
 </html>
