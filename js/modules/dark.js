@@ -2,6 +2,7 @@ const dark = document.querySelector('.dark');
 
 let mode = 0;
 dark.addEventListener('click', () => {
+    e.preventDefault();
     if (mode == 0) {
         document.body.style.backgroundColor = 'rgb(66, 66, 66)';
         document.body.style.color = 'white';
